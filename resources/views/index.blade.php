@@ -7,7 +7,6 @@
             <th>Id</th>
             <th>title</th>
             <th>description</th>
-            {{-- <th>street</th> --}}
             <th>price</th>
             <th>series</th>
             <th>sale_date</th>

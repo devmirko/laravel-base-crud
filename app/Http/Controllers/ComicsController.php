@@ -36,7 +36,19 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+
+
+        $comics = new Comic();
+        $comics->id = $formData['id'];
+        $comics->title = $formData['title'];
+        $comics->description = $formData['description'];
+        $comics->price = $formData['price'];
+        $comics->free_from = $formData['series'];
+        $comics->rooms = $formData['sale_date'];
+        $comics->surface = $formData['type'];
+        // TODO: validare i dati prima di inviarli al database
+        $comics->save();
     }
 
     /**
@@ -45,9 +57,11 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        //
+
+        return view('show', compact('comic'));
+
     }
 
     /**
