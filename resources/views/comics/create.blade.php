@@ -3,7 +3,7 @@
 @section('mainContent')
 <h1>questa e la pagina</h1>
 
-<form action="{{ route('store') }}" method="post">
+<form action="{{ route('comics.store') }}" method="post">
     @csrf
     <div>
         <label for="id">id</label>

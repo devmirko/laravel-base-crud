@@ -44,11 +44,16 @@ class ComicsController extends Controller
         $comics->title = $formData['title'];
         $comics->description = $formData['description'];
         $comics->price = $formData['price'];
-        $comics->free_from = $formData['series'];
-        $comics->rooms = $formData['sale_date'];
-        $comics->surface = $formData['type'];
+        $comics->series = $formData['series'];
+        $comics->sale_date = $formData['sale_date'];
+        $comics->type = $formData['type'];
         // TODO: validare i dati prima di inviarli al database
         $comics->save();
+
+        // TODO: reindirizzare la pagina alla home,
+        return redirect()->route('comics.index');
+
+
     }
 
     /**
