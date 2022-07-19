@@ -1,4 +1,4 @@
-@extends('base')
+@extends('comics.base')
 
 @section('mainContent')
 <table>

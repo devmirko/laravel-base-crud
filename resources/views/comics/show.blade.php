@@ -1,4 +1,4 @@
-@extends('base')
+@extends('comics.base')
 
 @section('mainContent')
 <h1>il fumetto da te ricercato: {{ $comic->id }}</h1>

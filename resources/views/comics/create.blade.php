@@ -1,4 +1,4 @@
-@extends('base')
+@extends('comics.base')
 
 @section('mainContent')
 <h1>questa e la pagina</h1>

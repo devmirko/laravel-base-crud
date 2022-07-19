@@ -15,7 +15,7 @@ class ComicsController extends Controller
     public function index()
     {
        $comics = Comic::all();
-       return view('index', compact('comics'));
+       return view('comics.index', compact('comics'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class ComicsController extends Controller
     public function show(Comic $comic)
     {
 
-        return view('show', compact('comic'));
+        return view('comics.show', compact('comic'));
 
     }
 
